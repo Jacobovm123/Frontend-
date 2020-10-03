@@ -22,7 +22,6 @@ public class Controlador extends HttpServlet {
     String add="add.jsp";
     String edit="edit.jsp";
     String index="index.jsp";
-<<<<<<< HEAD
     String editar1="ListarID.jsp";
     String acceso="";
     
@@ -95,71 +94,6 @@ public class Controlador extends HttpServlet {
           
           acceso=editar1;
           request.setAttribute("id_factura", request.getParameter("id"));
-=======
-    String acceso="";
-    
-    
-    UserService user= new UserService();
-    
-            
-    /**
-     * Processes requests for both HTTP <code>GET</code> and <code>POST</code>
-     * methods.
-     *
-     * @param request servlet request
-     * @param response servlet response
-     * @throws ServletException if a servlet-specific error occurs
-     * @throws IOException if an I/O error occurs
-     */
-    protected void processRequest(HttpServletRequest request, HttpServletResponse response)
-            throws ServletException, IOException {
-        response.setContentType("text/html;charset=UTF-8");
-      String accion =request.getParameter("accion");
-      if(accion.equals("add")){
-          acceso=add;
-          
-          
-      
-      
-      }else
-          if(accion.equals("Guardar")){
-              
-              String nombre=request.getParameter("txtnombre");
-              String descripcion=request.getParameter("txtdescripcion");
-              
-              user.agregar(nombre, descripcion);
-              acceso=index;
-              
-          
-          
-          }
-      
-          else if(accion.equals("editar")){
-          
-          acceso=edit;
-          request.setAttribute("id_categoria", request.getParameter("id"));
-          
-          }
-      
-          else if(accion.equals("Actualizar")){
-          
-              
-              String nombre=request.getParameter("txtnombre");
-              String descripcion=request.getParameter("txtdescripcion");
-              
-              int id =Integer.parseInt(request.getParameter("txtid"));
-              
-              user.actualizar(id, nombre, descripcion);
-              acceso=index;
-              
-          
-          }
-          else if (accion.equals("eliminar")){
-          int id =Integer.parseInt(request.getParameter("id"));
-          user.eliminar(id);
-          acceso=index;
-          
->>>>>>> origin/master
           
           }
       

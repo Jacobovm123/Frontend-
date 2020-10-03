@@ -27,14 +27,10 @@
                           <label>Descripcion</label>
                            <input type="text" name="txtdescripcion" class="form-control">
                               <input type="submit" name="accion" value="Guardar">
-<<<<<<< HEAD
                            
                 <a href="MenuAdmin.jsp">Rgresar al menu principal</a>
                     
              
-=======
-                              <a href="Controlador?accion=index">Regresar</a>
->>>>>>> origin/master
                     </form>
                     
                     

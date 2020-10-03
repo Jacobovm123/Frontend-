@@ -2,15 +2,43 @@
 
 <xs:element name="Actualizar" type="tns:Actualizar" />
 
+<xs:element name="ActualizarDF" type="tns:ActualizarDF" />
+
+<xs:element name="ActualizarDF1" type="tns:ActualizarDF1" />
+
+<xs:element name="ActualizarDF1Response" type="tns:ActualizarDF1Response" />
+
+<xs:element name="ActualizarDFResponse" type="tns:ActualizarDFResponse" />
+
 <xs:element name="ActualizarResponse" type="tns:ActualizarResponse" />
+
+<xs:element name="AutenticacionLogin" type="tns:AutenticacionLogin" />
+
+<xs:element name="AutenticacionLoginResponse" type="tns:AutenticacionLoginResponse" />
+
+<xs:element name="DFListar" type="tns:DFListar" />
+
+<xs:element name="DFListarResponse" type="tns:DFListarResponse" />
 
 <xs:element name="Eliminar" type="tns:Eliminar" />
 
 <xs:element name="EliminarResponse" type="tns:EliminarResponse" />
 
+<xs:element name="FDlistar" type="tns:FDlistar" />
+
+<xs:element name="FDlistarID" type="tns:FDlistarID" />
+
+<xs:element name="FDlistarIDResponse" type="tns:FDlistarIDResponse" />
+
+<xs:element name="FDlistarResponse" type="tns:FDlistarResponse" />
+
 <xs:element name="Flistar" type="tns:Flistar" />
 
 <xs:element name="FlistarResponse" type="tns:FlistarResponse" />
+
+<xs:element name="IngresarLogin" type="tns:IngresarLogin" />
+
+<xs:element name="IngresarLoginResponse" type="tns:IngresarLoginResponse" />
 
 <xs:element name="ListarID" type="tns:ListarID" />
 
@@ -20,27 +48,72 @@
 
 <xs:element name="agregarResponse" type="tns:agregarResponse" />
 
+<xs:element name="agregardf" type="tns:agregardf" />
+
+<xs:element name="agregardfResponse" type="tns:agregardfResponse" />
+
+<xs:element name="deleteDF" type="tns:deleteDF" />
+
+<xs:element name="deleteDFResponse" type="tns:deleteDFResponse" />
+
 <xs:element name="listar" type="tns:listar" />
 
 <xs:element name="listarResponse" type="tns:listarResponse" />
 
-<xs:complexType name="ListarID">
+<xs:complexType name="ActualizarDF">
 <xs:sequence>
 <xs:element name="id" type="xs:int" />
+<xs:element name="descripcion" type="xs:string" minOccurs="0" />
+<xs:element name="nombre" type="xs:string" minOccurs="0" />
+<xs:element name="nombrep" type="xs:string" minOccurs="0" />
+<xs:element name="marca" type="xs:string" minOccurs="0" />
+<xs:element name="cantidad" type="xs:string" minOccurs="0" />
+<xs:element name="precio" type="xs:string" minOccurs="0" />
+<xs:element name="total" type="xs:string" minOccurs="0" />
 </xs:sequence>
 </xs:complexType>
 
-<xs:complexType name="ListarIDResponse">
+<xs:complexType name="ActualizarDFResponse">
 <xs:sequence>
-<xs:element name="return" type="tns:user" minOccurs="0" />
+<xs:element name="return" type="xs:string" minOccurs="0" />
 </xs:sequence>
 </xs:complexType>
 
-<xs:complexType name="user">
+<xs:complexType name="FDlistar">
+<xs:sequence />
+</xs:complexType>
+
+<xs:complexType name="FDlistarResponse">
 <xs:sequence>
+<xs:element name="return" type="tns:detalleFactura" minOccurs="0" maxOccurs="unbounded" />
+</xs:sequence>
+</xs:complexType>
+
+<xs:complexType name="detalleFactura">
+<xs:sequence>
+<xs:element name="cantidad" type="xs:string" minOccurs="0" />
 <xs:element name="descripcion" type="xs:string" minOccurs="0" />
 <xs:element name="id" type="xs:int" />
+<xs:element name="id_factura" type="xs:int" />
+<xs:element name="id_producto" type="xs:int" />
+<xs:element name="marca" type="xs:string" minOccurs="0" />
 <xs:element name="nombre" type="xs:string" minOccurs="0" />
+<xs:element name="nombrep" type="xs:string" minOccurs="0" />
+<xs:element name="precio" type="xs:string" minOccurs="0" />
+<xs:element name="total" type="xs:string" minOccurs="0" />
+</xs:sequence>
+</xs:complexType>
+
+<xs:complexType name="AutenticacionLogin">
+<xs:sequence>
+<xs:element name="usuario" type="xs:string" minOccurs="0" />
+<xs:element name="pass" type="xs:string" minOccurs="0" />
+</xs:sequence>
+</xs:complexType>
+
+<xs:complexType name="AutenticacionLoginResponse">
+<xs:sequence>
+<xs:element name="return" type="xs:boolean" />
 </xs:sequence>
 </xs:complexType>
 
@@ -59,6 +132,7 @@
 <xs:element name="fecha" type="xs:string" minOccurs="0" />
 <xs:element name="id" type="xs:int" />
 <xs:element name="id_cliente" type="xs:int" />
+<xs:element name="nit" type="xs:string" minOccurs="0" />
 <xs:element name="nombre" type="xs:string" minOccurs="0" />
 <xs:element name="total" type="xs:string" minOccurs="0" />
 </xs:sequence>
@@ -77,6 +151,105 @@
 </xs:sequence>
 </xs:complexType>
 
+<xs:complexType name="listar">
+<xs:sequence />
+</xs:complexType>
+
+<xs:complexType name="listarResponse">
+<xs:sequence>
+<xs:element name="return" type="tns:user" minOccurs="0" maxOccurs="unbounded" />
+</xs:sequence>
+</xs:complexType>
+
+<xs:complexType name="user">
+<xs:sequence>
+<xs:element name="descripcion" type="xs:string" minOccurs="0" />
+<xs:element name="id" type="xs:int" />
+<xs:element name="nombre" type="xs:string" minOccurs="0" />
+</xs:sequence>
+</xs:complexType>
+
+<xs:complexType name="agregardf">
+<xs:sequence>
+<xs:element name="id_factura" type="xs:string" minOccurs="0" />
+<xs:element name="id_producto" type="xs:string" minOccurs="0" />
+<xs:element name="cantidad" type="xs:string" minOccurs="0" />
+<xs:element name="precio" type="xs:string" minOccurs="0" />
+</xs:sequence>
+</xs:complexType>
+
+<xs:complexType name="agregardfResponse">
+<xs:sequence>
+<xs:element name="return" type="xs:string" minOccurs="0" />
+</xs:sequence>
+</xs:complexType>
+
+<xs:complexType name="ActualizarDF1">
+<xs:sequence>
+<xs:element name="id" type="xs:int" />
+<xs:element name="id_factura" type="xs:int" />
+<xs:element name="id_producto" type="xs:int" />
+<xs:element name="cantidad" type="xs:string" minOccurs="0" />
+<xs:element name="precio" type="xs:string" minOccurs="0" />
+</xs:sequence>
+</xs:complexType>
+
+<xs:complexType name="ActualizarDF1Response">
+<xs:sequence>
+<xs:element name="return" type="xs:string" minOccurs="0" />
+</xs:sequence>
+</xs:complexType>
+
+<xs:complexType name="IngresarLogin">
+<xs:sequence>
+<xs:element name="nombre" type="xs:string" minOccurs="0" />
+<xs:element name="apellido" type="xs:string" minOccurs="0" />
+<xs:element name="usuario" type="xs:string" minOccurs="0" />
+<xs:element name="pass" type="xs:string" minOccurs="0" />
+<xs:element name="cargo" type="xs:string" minOccurs="0" />
+</xs:sequence>
+</xs:complexType>
+
+<xs:complexType name="IngresarLoginResponse">
+<xs:sequence>
+<xs:element name="return" type="xs:string" minOccurs="0" />
+</xs:sequence>
+</xs:complexType>
+
+<xs:complexType name="DFListar">
+<xs:sequence />
+</xs:complexType>
+
+<xs:complexType name="DFListarResponse">
+<xs:sequence>
+<xs:element name="return" type="tns:detalleFactura" minOccurs="0" maxOccurs="unbounded" />
+</xs:sequence>
+</xs:complexType>
+
+<xs:complexType name="ListarID">
+<xs:sequence>
+<xs:element name="id" type="xs:int" />
+</xs:sequence>
+</xs:complexType>
+
+<xs:complexType name="ListarIDResponse">
+<xs:sequence>
+<xs:element name="return" type="tns:user" minOccurs="0" />
+</xs:sequence>
+</xs:complexType>
+
+<xs:complexType name="FDlistarID">
+<xs:sequence>
+<xs:element name="id" type="xs:int" />
+</xs:sequence>
+</xs:complexType>
+
+<xs:complexType name="FDlistarIDResponse">
+<xs:sequence>
+<xs:element name="return" type="tns:detalleFactura" minOccurs="0" />
+</xs:sequence>
+</xs:complexType>
+
 <xs:complexType name="Actualizar">
 <xs:sequence>
 <xs:element name="id" type="xs:int" />
@@ -91,13 +264,15 @@
 </xs:sequence>
 </xs:complexType>
 
-<xs:complexType name="listar">
-<xs:sequence />
+<xs:complexType name="deleteDF">
+<xs:sequence>
+<xs:element name="id" type="xs:int" />
+</xs:sequence>
 </xs:complexType>
 
-<xs:complexType name="listarResponse">
+<xs:complexType name="deleteDFResponse">
 <xs:sequence>
-<xs:element name="return" type="tns:user" minOccurs="0" maxOccurs="unbounded" />
+<xs:element name="return" type="tns:detalleFactura" minOccurs="0" />
 </xs:sequence>
 </xs:complexType>
 
