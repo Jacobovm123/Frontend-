@@ -43,13 +43,9 @@
                           <label>Descripcion</label>
                            <input type="text" value="<%= u.getDescripcion()%>" name="txtdescripcion" class="form-control">
                               <input type="submit" name="accion" value="Actualizar" class="btb btb-seccess">
-<<<<<<< HEAD
                                 <a href="MenuAdmin.jsp">Rgresar al menu principal</a>
                     
                            
-=======
-                              <a href="Controlador?accion=index">Regresar</a>
->>>>>>> origin/master
                     </form>
                     
                     

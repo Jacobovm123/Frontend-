@@ -4,29 +4,29 @@
 <xsd:import namespace="http://WebService/" schemaLocation="http://localhost:8085/Backend/Servicios?xsd=1" />
 </xsd:schema>
 </types>
+<message name="deleteDF">
+<part name="parameters" element="tns:deleteDF" />
+</message>
+<message name="deleteDFResponse">
+<part name="parameters" element="tns:deleteDFResponse" />
+</message>
 <message name="agregar">
 <part name="parameters" element="tns:agregar" />
 </message>
 <message name="agregarResponse">
 <part name="parameters" element="tns:agregarResponse" />
 </message>
-<message name="listar">
-<part name="parameters" element="tns:listar" />
+<message name="AutenticacionLogin">
+<part name="parameters" element="tns:AutenticacionLogin" />
 </message>
-<message name="listarResponse">
-<part name="parameters" element="tns:listarResponse" />
+<message name="AutenticacionLoginResponse">
+<part name="parameters" element="tns:AutenticacionLoginResponse" />
 </message>
-<message name="Actualizar">
-<part name="parameters" element="tns:Actualizar" />
+<message name="FDlistar">
+<part name="parameters" element="tns:FDlistar" />
 </message>
-<message name="ActualizarResponse">
-<part name="parameters" element="tns:ActualizarResponse" />
-</message>
-<message name="ListarID">
-<part name="parameters" element="tns:ListarID" />
-</message>
-<message name="ListarIDResponse">
-<part name="parameters" element="tns:ListarIDResponse" />
+<message name="FDlistarResponse">
+<part name="parameters" element="tns:FDlistarResponse" />
 </message>
 <message name="Flistar">
 <part name="parameters" element="tns:Flistar" />
@@ -34,40 +34,139 @@
 <message name="FlistarResponse">
 <part name="parameters" element="tns:FlistarResponse" />
 </message>
+<message name="ListarID">
+<part name="parameters" element="tns:ListarID" />
+</message>
+<message name="ListarIDResponse">
+<part name="parameters" element="tns:ListarIDResponse" />
+</message>
 <message name="Eliminar">
 <part name="parameters" element="tns:Eliminar" />
 </message>
 <message name="EliminarResponse">
 <part name="parameters" element="tns:EliminarResponse" />
 </message>
+<message name="agregardf">
+<part name="parameters" element="tns:agregardf" />
+</message>
+<message name="agregardfResponse">
+<part name="parameters" element="tns:agregardfResponse" />
+</message>
+<message name="listar">
+<part name="parameters" element="tns:listar" />
+</message>
+<message name="listarResponse">
+<part name="parameters" element="tns:listarResponse" />
+</message>
+<message name="FDlistarID">
+<part name="parameters" element="tns:FDlistarID" />
+</message>
+<message name="FDlistarIDResponse">
+<part name="parameters" element="tns:FDlistarIDResponse" />
+</message>
+<message name="ActualizarDF">
+<part name="parameters" element="tns:ActualizarDF" />
+</message>
+<message name="ActualizarDFResponse">
+<part name="parameters" element="tns:ActualizarDFResponse" />
+</message>
+<message name="IngresarLogin">
+<part name="parameters" element="tns:IngresarLogin" />
+</message>
+<message name="IngresarLoginResponse">
+<part name="parameters" element="tns:IngresarLoginResponse" />
+</message>
+<message name="Actualizar">
+<part name="parameters" element="tns:Actualizar" />
+</message>
+<message name="ActualizarResponse">
+<part name="parameters" element="tns:ActualizarResponse" />
+</message>
+<message name="DFListar">
+<part name="parameters" element="tns:DFListar" />
+</message>
+<message name="DFListarResponse">
+<part name="parameters" element="tns:DFListarResponse" />
+</message>
+<message name="ActualizarDF1">
+<part name="parameters" element="tns:ActualizarDF1" />
+</message>
+<message name="ActualizarDF1Response">
+<part name="parameters" element="tns:ActualizarDF1Response" />
+</message>
 <portType name="Servicios">
+<operation name="deleteDF">
+<input wsam:Action="http://WebService/Servicios/deleteDFRequest" message="tns:deleteDF" />
+<output wsam:Action="http://WebService/Servicios/deleteDFResponse" message="tns:deleteDFResponse" />
+</operation>
 <operation name="agregar">
 <input wsam:Action="http://WebService/Servicios/agregarRequest" message="tns:agregar" />
 <output wsam:Action="http://WebService/Servicios/agregarResponse" message="tns:agregarResponse" />
 </operation>
-<operation name="listar">
-<input wsam:Action="http://WebService/Servicios/listarRequest" message="tns:listar" />
-<output wsam:Action="http://WebService/Servicios/listarResponse" message="tns:listarResponse" />
+<operation name="AutenticacionLogin">
+<input wsam:Action="http://WebService/Servicios/AutenticacionLoginRequest" message="tns:AutenticacionLogin" />
+<output wsam:Action="http://WebService/Servicios/AutenticacionLoginResponse" message="tns:AutenticacionLoginResponse" />
 </operation>
-<operation name="Actualizar">
-<input wsam:Action="http://WebService/Servicios/ActualizarRequest" message="tns:Actualizar" />
-<output wsam:Action="http://WebService/Servicios/ActualizarResponse" message="tns:ActualizarResponse" />
-</operation>
-<operation name="ListarID">
-<input wsam:Action="http://WebService/Servicios/ListarIDRequest" message="tns:ListarID" />
-<output wsam:Action="http://WebService/Servicios/ListarIDResponse" message="tns:ListarIDResponse" />
+<operation name="FDlistar">
+<input wsam:Action="http://WebService/Servicios/FDlistarRequest" message="tns:FDlistar" />
+<output wsam:Action="http://WebService/Servicios/FDlistarResponse" message="tns:FDlistarResponse" />
 </operation>
 <operation name="Flistar">
 <input wsam:Action="http://WebService/Servicios/FlistarRequest" message="tns:Flistar" />
 <output wsam:Action="http://WebService/Servicios/FlistarResponse" message="tns:FlistarResponse" />
 </operation>
+<operation name="ListarID">
+<input wsam:Action="http://WebService/Servicios/ListarIDRequest" message="tns:ListarID" />
+<output wsam:Action="http://WebService/Servicios/ListarIDResponse" message="tns:ListarIDResponse" />
+</operation>
 <operation name="Eliminar">
 <input wsam:Action="http://WebService/Servicios/EliminarRequest" message="tns:Eliminar" />
 <output wsam:Action="http://WebService/Servicios/EliminarResponse" message="tns:EliminarResponse" />
 </operation>
+<operation name="agregardf">
+<input wsam:Action="http://WebService/Servicios/agregardfRequest" message="tns:agregardf" />
+<output wsam:Action="http://WebService/Servicios/agregardfResponse" message="tns:agregardfResponse" />
+</operation>
+<operation name="listar">
+<input wsam:Action="http://WebService/Servicios/listarRequest" message="tns:listar" />
+<output wsam:Action="http://WebService/Servicios/listarResponse" message="tns:listarResponse" />
+</operation>
+<operation name="FDlistarID">
+<input wsam:Action="http://WebService/Servicios/FDlistarIDRequest" message="tns:FDlistarID" />
+<output wsam:Action="http://WebService/Servicios/FDlistarIDResponse" message="tns:FDlistarIDResponse" />
+</operation>
+<operation name="ActualizarDF">
+<input wsam:Action="http://WebService/Servicios/ActualizarDFRequest" message="tns:ActualizarDF" />
+<output wsam:Action="http://WebService/Servicios/ActualizarDFResponse" message="tns:ActualizarDFResponse" />
+</operation>
+<operation name="IngresarLogin">
+<input wsam:Action="http://WebService/Servicios/IngresarLoginRequest" message="tns:IngresarLogin" />
+<output wsam:Action="http://WebService/Servicios/IngresarLoginResponse" message="tns:IngresarLoginResponse" />
+</operation>
+<operation name="Actualizar">
+<input wsam:Action="http://WebService/Servicios/ActualizarRequest" message="tns:Actualizar" />
+<output wsam:Action="http://WebService/Servicios/ActualizarResponse" message="tns:ActualizarResponse" />
+</operation>
+<operation name="DFListar">
+<input wsam:Action="http://WebService/Servicios/DFListarRequest" message="tns:DFListar" />
+<output wsam:Action="http://WebService/Servicios/DFListarResponse" message="tns:DFListarResponse" />
+</operation>
+<operation name="ActualizarDF1">
+<input wsam:Action="http://WebService/Servicios/ActualizarDF1Request" message="tns:ActualizarDF1" />
+<output wsam:Action="http://WebService/Servicios/ActualizarDF1Response" message="tns:ActualizarDF1Response" />
+</operation>
 </portType>
 <binding name="ServiciosPortBinding" type="tns:Servicios">
 <soap:binding transport="http://schemas.xmlsoap.org/soap/http" style="document" />
+<operation name="deleteDF">
+<soap:operation soapAction="" />
+<input>
+<soap:body use="literal" />
+</input>
+<output>
+<soap:body use="literal" />
+</output>
+</operation>
 <operation name="agregar">
 <soap:operation soapAction="" />
 <input>
@@ -77,7 +176,7 @@
 <soap:body use="literal" />
 </output>
 </operation>
-<operation name="listar">
+<operation name="AutenticacionLogin">
 <soap:operation soapAction="" />
 <input>
 <soap:body use="literal" />
@@ -86,16 +185,7 @@
 <soap:body use="literal" />
 </output>
 </operation>
-<operation name="Actualizar">
-<soap:operation soapAction="" />
-<input>
-<soap:body use="literal" />
-</input>
-<output>
-<soap:body use="literal" />
-</output>
-</operation>
-<operation name="ListarID">
+<operation name="FDlistar">
 <soap:operation soapAction="" />
 <input>
 <soap:body use="literal" />
@@ -113,7 +203,88 @@
 <soap:body use="literal" />
 </output>
 </operation>
+<operation name="ListarID">
+<soap:operation soapAction="" />
+<input>
+<soap:body use="literal" />
+</input>
+<output>
+<soap:body use="literal" />
+</output>
+</operation>
 <operation name="Eliminar">
+<soap:operation soapAction="" />
+<input>
+<soap:body use="literal" />
+</input>
+<output>
+<soap:body use="literal" />
+</output>
+</operation>
+<operation name="agregardf">
+<soap:operation soapAction="" />
+<input>
+<soap:body use="literal" />
+</input>
+<output>
+<soap:body use="literal" />
+</output>
+</operation>
+<operation name="listar">
+<soap:operation soapAction="" />
+<input>
+<soap:body use="literal" />
+</input>
+<output>
+<soap:body use="literal" />
+</output>
+</operation>
+<operation name="FDlistarID">
+<soap:operation soapAction="" />
+<input>
+<soap:body use="literal" />
+</input>
+<output>
+<soap:body use="literal" />
+</output>
+</operation>
+<operation name="ActualizarDF">
+<soap:operation soapAction="" />
+<input>
+<soap:body use="literal" />
+</input>
+<output>
+<soap:body use="literal" />
+</output>
+</operation>
+<operation name="IngresarLogin">
+<soap:operation soapAction="" />
+<input>
+<soap:body use="literal" />
+</input>
+<output>
+<soap:body use="literal" />
+</output>
+</operation>
+<operation name="Actualizar">
+<soap:operation soapAction="" />
+<input>
+<soap:body use="literal" />
+</input>
+<output>
+<soap:body use="literal" />
+</output>
+</operation>
+<operation name="DFListar">
+<soap:operation soapAction="" />
+<input>
+<soap:body use="literal" />
+</input>
+<output>
+<soap:body use="literal" />
+</output>
+</operation>
+<operation name="ActualizarDF1">
 <soap:operation soapAction="" />
 <input>
 <soap:body use="literal" />
