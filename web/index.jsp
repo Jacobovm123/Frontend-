@@ -13,6 +13,9 @@
         <title>CATEGORIA </title>
     </head>
     <body>
+<<<<<<< HEAD
+        
+                    
         <div class="container mt-4">
             
             <div class="card">
@@ -20,6 +23,17 @@
                     <a href="Controlador?accion=add" class="btn btn-primary "> nueva categoria </a>
                     
                 </div>
+                  <a href="MenuAdmin.jsp">Rgresar al menu principal</a>
+                    
+=======
+        <div class="container mt-4">
+            
+            <div class="card">
+                <div class="card-header">
+                    <a href="Controlador?accion=add" class="btn btn-primary "> nueva categoria </a>
+                    
+                </div>
+>>>>>>> origin/master
                 <div class="card-body">
                     
                     <table class="table table-hover">
